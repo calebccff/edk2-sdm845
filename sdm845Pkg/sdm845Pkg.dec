@@ -45,3 +45,7 @@
   gsdm845PkgTokenSpaceGuid.PcdMipiFrameBufferVisibleHeight|2160|UINT32|0x0000a405
   # RTC information
   gsdm845PkgTokenSpaceGuid.PcdBootShimInfo1|0xb0000000|UINT64|0x00000a601
+  # SMBIOS
+  gsdm845PkgTokenSpaceGuid.PcdSmbiosSystemModel|"SDM845 Device"|VOID*|0x0000a301
+  gsdm845PkgTokenSpaceGuid.PcdSmbiosProcessorModel|"Qualcomm Snapdragon 845 Processor (8994)"|VOID*|0x0000a302
+  gsdm845PkgTokenSpaceGuid.PcdSmbiosSystemRetailModel|"SDM845"|VOID*|0x0000a303

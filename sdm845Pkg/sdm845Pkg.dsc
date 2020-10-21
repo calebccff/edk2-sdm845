@@ -56,10 +56,16 @@
   # SimpleFbDxe
   FrameBufferBltLib|MdeModulePkg/Library/FrameBufferBltLib/FrameBufferBltLib.inf
 
+  MallocLib|sdm845Pkg/Library/MallocLib/MallocLib.inf
+
   SerialPortLib|sdm845Pkg/Library/FrameBufferSerialPortLib/FrameBufferSerialPortLib.inf
   PlatformBootManagerLib|sdm845Pkg/Library/PlatformBootManagerLib/PlatformBootManagerLib.inf
   MemoryInitPeiLib|sdm845Pkg/Library/MemoryInitPeiLib/PeiMemoryAllocationLib.inf
   PlatformPeiLib|sdm845Pkg/Library/PlatformPeiLib/PlatformPeiLib.inf
+
+  # UI Llbrary and apps
+  LittleVglLib|sdm845Pkg/Library/LittleVglLib/LittleVglLib.inf
+  LodePngLib|sdm845Pkg/Library/LodePngLib/LodePngLib.inf
 
 [LibraryClasses.common.SEC]
   PrePiLib|EmbeddedPkg/Library/PrePiLib/PrePiLib.inf
@@ -255,14 +261,22 @@
   MdeModulePkg/Universal/SetupBrowserDxe/SetupBrowserDxe.inf
   MdeModulePkg/Universal/DriverHealthManagerDxe/DriverHealthManagerDxe.inf
   MdeModulePkg/Universal/BdsDxe/BdsDxe.inf
-  MdeModulePkg/Application/UiApp/UiApp.inf {
+  sdm845Pkg/Application/BdsMenuApp/BdsMenuApp.inf {
     <LibraryClasses>
       NULL|MdeModulePkg/Library/DeviceManagerUiLib/DeviceManagerUiLib.inf
       NULL|MdeModulePkg/Library/BootManagerUiLib/BootManagerUiLib.inf
       NULL|MdeModulePkg/Library/BootMaintenanceManagerUiLib/BootMaintenanceManagerUiLib.inf
-      PcdLib|MdePkg/Library/DxePcdLib/DxePcdLib.inf
   }
   sdm845Pkg/Drivers/LogoDxe/LogoDxe.inf
+  sdm845Pkg/Application/BootSplashApp/BootSplashApp.inf
+  #MdeModulePkg/Application/UiApp/UiApp.inf {
+  #  <LibraryClasses>
+  #    NULL|MdeModulePkg/Library/DeviceManagerUiLib/DeviceManagerUiLib.inf
+  #    NULL|MdeModulePkg/Library/BootManagerUiLib/BootManagerUiLib.inf
+  #    NULL|MdeModulePkg/Library/BootMaintenanceManagerUiLib/BootMaintenanceManagerUiLib.inf
+  #    PcdLib|MdePkg/Library/DxePcdLib/DxePcdLib.inf
+  #}
+  #sdm845Pkg/Drivers/LogoDxe/LogoDxe.inf
 
   ShellPkg/Application/Shell/Shell.inf {
     <LibraryClasses>
