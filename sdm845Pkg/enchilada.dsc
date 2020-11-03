@@ -14,6 +14,15 @@
 [PcdsFixedAtBuild.common]
   # System Memory (5GB)
   gArmTokenSpaceGuid.PcdSystemMemorySize|0x140000000
+  #gsdm845PkgTokenSpaceGuid.PcdSmbiosSystemModel|"OnePlus 6"
+  #gsdm845PkgTokenSpaceGuid.PcdSmbiosProcessorModel|"Qualcomm Snapdragon 845 Processor"
+
+  #gsdm845PkgTokenSpaceGuid.PcdMipiFrameBufferAddress|0x9D469780
 
   gsdm845PkgTokenSpaceGuid.PcdMipiFrameBufferWidth|1080
-  gsdm845PkgTokenSpaceGuid.PcdMipiFrameBufferHeight|2280
+  gsdm845PkgTokenSpaceGuid.PcdMipiFrameBufferHeight|2200
+
+  #gsdm845PkgTokenSpaceGuid.SynapticsCtlrAddress|0x4b
+  #gsdm845PkgTokenSpaceGuid.SynapticsCtlrResetPin|99
+  #gsdm845PkgTokenSpaceGuid.SynapticsCtlrIntPin|125
+  #gsdm845PkgTokenSpaceGuid.SynapticsCtlrI2cDevice|1

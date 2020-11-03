@@ -56,7 +56,8 @@
   # SimpleFbDxe
   FrameBufferBltLib|MdeModulePkg/Library/FrameBufferBltLib/FrameBufferBltLib.inf
 
-  MallocLib|sdm845Pkg/Library/MallocLib/MallocLib.inf
+  #InterruptsLib|Lumia950XLPkg/Library/InterruptsLib/InterruptsLib.inf
+  #MallocLib|sdm845Pkg/Library/MallocLib/MallocLib.inf
 
   SerialPortLib|sdm845Pkg/Library/FrameBufferSerialPortLib/FrameBufferSerialPortLib.inf
   PlatformBootManagerLib|sdm845Pkg/Library/PlatformBootManagerLib/PlatformBootManagerLib.inf
@@ -193,6 +194,13 @@
   #
 
   #
+  # Device Drivers
+  #
+
+  #sdm845Pkg/Drivers/SynapticsTouchDxe/SynapticsTouchDevice.inf
+  #sdm845Pkg/Drivers/SynapticsTouchDxe/SynapticsTouchDxe.inf
+
+  #
   # Virtual Keyboard
   #
   EmbeddedPkg/Drivers/VirtualKeyboardDxe/VirtualKeyboardDxe.inf
@@ -261,22 +269,22 @@
   MdeModulePkg/Universal/SetupBrowserDxe/SetupBrowserDxe.inf
   MdeModulePkg/Universal/DriverHealthManagerDxe/DriverHealthManagerDxe.inf
   MdeModulePkg/Universal/BdsDxe/BdsDxe.inf
-  sdm845Pkg/Application/BdsMenuApp/BdsMenuApp.inf {
-    <LibraryClasses>
-      NULL|MdeModulePkg/Library/DeviceManagerUiLib/DeviceManagerUiLib.inf
-      NULL|MdeModulePkg/Library/BootManagerUiLib/BootManagerUiLib.inf
-      NULL|MdeModulePkg/Library/BootMaintenanceManagerUiLib/BootMaintenanceManagerUiLib.inf
-  }
-  sdm845Pkg/Drivers/LogoDxe/LogoDxe.inf
-  sdm845Pkg/Application/BootSplashApp/BootSplashApp.inf
-  #MdeModulePkg/Application/UiApp/UiApp.inf {
+  #sdm845Pkg/Application/BdsMenuApp/BdsMenuApp.inf {
   #  <LibraryClasses>
   #    NULL|MdeModulePkg/Library/DeviceManagerUiLib/DeviceManagerUiLib.inf
   #    NULL|MdeModulePkg/Library/BootManagerUiLib/BootManagerUiLib.inf
   #    NULL|MdeModulePkg/Library/BootMaintenanceManagerUiLib/BootMaintenanceManagerUiLib.inf
-  #    PcdLib|MdePkg/Library/DxePcdLib/DxePcdLib.inf
   #}
   #sdm845Pkg/Drivers/LogoDxe/LogoDxe.inf
+  #sdm845Pkg/Application/BootSplashApp/BootSplashApp.inf
+  MdeModulePkg/Application/UiApp/UiApp.inf {
+    <LibraryClasses>
+      NULL|MdeModulePkg/Library/DeviceManagerUiLib/DeviceManagerUiLib.inf
+      NULL|MdeModulePkg/Library/BootManagerUiLib/BootManagerUiLib.inf
+      NULL|MdeModulePkg/Library/BootMaintenanceManagerUiLib/BootMaintenanceManagerUiLib.inf
+      PcdLib|MdePkg/Library/DxePcdLib/DxePcdLib.inf
+  }
+  sdm845Pkg/Drivers/LogoDxe/LogoDxe.inf
 
   ShellPkg/Application/Shell/Shell.inf {
     <LibraryClasses>

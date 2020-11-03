@@ -191,6 +191,12 @@ READ_LOCK_STATUS   = TRUE
   #
 
   #
+  # Device Drivers
+  #
+  #INF sdm845Pkg/Drivers/SynapticsTouchDxe/SynapticsTouchDevice.inf
+  #INF sdm845Pkg/Drivers/SynapticsTouchDxe/SynapticsTouchDxe.inf
+
+  #
   # Virtual Keyboard
   #
   INF EmbeddedPkg/Drivers/VirtualKeyboardDxe/VirtualKeyboardDxe.inf
@@ -311,11 +317,11 @@ READ_LOCK_STATUS   = TRUE
   INF MdeModulePkg/Universal/SetupBrowserDxe/SetupBrowserDxe.inf
   INF MdeModulePkg/Universal/DriverHealthManagerDxe/DriverHealthManagerDxe.inf
   INF MdeModulePkg/Universal/BdsDxe/BdsDxe.inf
-  INF sdm845Pkg/Application/BdsMenuApp/BdsMenuApp.inf
-  INF sdm845Pkg/Drivers/LogoDxe/LogoDxe.inf
-  INF sdm845Pkg/Application/BootSplashApp/BootSplashApp.inf
-  #INF MdeModulePkg/Application/UiApp/UiApp.inf
+  #INF sdm845Pkg/Application/BdsMenuApp/BdsMenuApp.inf
   #INF sdm845Pkg/Drivers/LogoDxe/LogoDxe.inf
+  #INF sdm845Pkg/Application/BootSplashApp/BootSplashApp.inf
+  INF MdeModulePkg/Application/UiApp/UiApp.inf
+  INF sdm845Pkg/Drivers/LogoDxe/LogoDxe.inf
 
 [FV.FVMAIN_COMPACT]
 FvAlignment        = 8

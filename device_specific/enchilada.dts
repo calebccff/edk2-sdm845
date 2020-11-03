@@ -4717,7 +4717,7 @@
 					qcom,pon_1 {
 						qcom,pon-type = <0x0>;
 						qcom,pull-up = <0x1>;
-						linux,code = <0x74>;
+						linux,code = <28>;
 						qcom,support-reset = <0x0>;
 					};
 
@@ -24692,7 +24692,8 @@
 				label = "volume_up";
 				gpios = <0xe7 0x6 0x1>;
 				linux,input-type = <0x1>;
-				linux,code = <0x73>;
+				linux,code = <103>;
+				//linux,code = <0x73>;
 				gpio-key,wakeup;
 				debounce-interval = <0xf>;
 				linux,can-disable;
@@ -24713,7 +24714,8 @@
 				label = "volume_down";
 				gpios = <0xe7 0x5 0x1>;
 				linux,input-type = <0x1>;
-				linux,code = <0x72>;
+				linux,code = <108>;
+				//linux,code = <0x72>;
 				debounce-interval = <0xf>;
 				linux,can-disable;
 			};
